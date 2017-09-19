@@ -1,15 +1,12 @@
-React Ui-Material Admin Template
+React/Redux Material UI
 ================================
 
-This is a simple responsive admin template using [React](https://facebook.github.io/react/) and [Material-UI](http://www.material-ui.com/) components.
+This is a simple responsive admin template using [React](https://facebook.github.io/react/), [Redux] (http://redux.js.org/) and [Material-UI](http://www.material-ui.com/) components.
 
 This is the very first version, feel free to use for any app. Contributions are always welcome!
 
 Demo
 ----
-
-You can find a demo [here](http://rafaelhz.github.io/react-material-admin-template).
-
 
 Installation / Running
 ----------------------
