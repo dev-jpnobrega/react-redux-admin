@@ -7,6 +7,9 @@ import Search from 'material-ui/svg-icons/action/search';
 const SearchBox = () => {
 
   const styles = {
+    defaultBode: {
+      color: '#fc'
+    },
     iconButton: {
       float: 'left',
       paddingTop: 17

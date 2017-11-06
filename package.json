@@ -1,6 +1,6 @@
 {
   "name": "react-material-admin-template",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Admin template using React and Material-UI",
   "engines": {
     "npm": ">=3"
@@ -21,18 +21,26 @@
     "test:watch": "npm run test -- --watch",
     "open:cover": "npm run test:cover && open coverage/index.html"
   },
-  "author": "Rafael Zeffa",
+  "author": "João Paulo Nobrega",
   "license": "MIT",
   "dependencies": {
+    "axios": "0.16.2",
     "flexboxgrid": "6.3.1",
     "font-awesome": "4.7.0",
     "history": "4.5.1",
     "material-ui": "0.17.0",
     "react": "15.4.2",
     "react-dom": "15.4.2",
+    "react-redux": "5.0.6",
+    "react-redux-toastr": "7.1.5",
     "react-router": "3.0.2",
     "react-tap-event-plugin": "2.0.1",
-    "recharts": "0.20.8"
+    "recharts": "0.20.8",
+    "redux": "3.7.2",
+    "redux-form": "7.0.4",
+    "redux-multi": "0.1.12",
+    "redux-promise": "0.5.3",
+    "redux-thunk": "2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "6.7.3",
@@ -87,9 +95,10 @@
   "keywords": [
     "react",
     "reactjs",
+    "redux",
+    "flux",
     "material",
     "material-ui",
-    "template",
     "admin"
   ],
   "repository": {

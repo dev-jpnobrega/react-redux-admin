@@ -20,6 +20,7 @@ export default {
     publicPath: './',
     filename: '[name].[chunkhash].js'
   },
+  
   plugins: [
     new WebpackMd5Hash(),
 
