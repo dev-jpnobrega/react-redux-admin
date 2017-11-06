@@ -1,5 +1,5 @@
 
-import * as types  from './client-action-types'
+import * as types  from './client-action-types';
 
 const INITIAL_STATE = {
     client: {
@@ -8,17 +8,17 @@ const INITIAL_STATE = {
         phone: '', 
         doc: '', 
     }     
-}
+};
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case types.CLIENT_REGISTERED:
             //Call server register client
-            return { ...state, ...action.payload }            
+            return { ...state, ...action.payload };       
         case types.CLIENT_FETCHED:
             //Call search client
-            return { ...state, client: action.payload }
+            return { ...state, client: action.payload };
         default:
-            return state
+            return state;
     }
-}
+};

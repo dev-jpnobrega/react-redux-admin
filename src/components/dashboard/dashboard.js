@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import {cyan600, pink600, purple600, orange600} from 'material-ui/styles/colors';
 import Assessment from 'material-ui/svg-icons/action/assessment';
@@ -17,14 +17,14 @@ import RecentlyProducts from './RecentlyProducts';
 import globalStyles from '../../styles';
 import Data from '../../data';
 
-import { getGraficsData } from './dashboard-action'
+import { getGraficsData } from './dashboard-action';
 
 class DashBoard extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
       errors: {}
-    }
+    };
   }
 
   onSubmit() {

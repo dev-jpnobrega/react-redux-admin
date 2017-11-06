@@ -10,18 +10,18 @@ function submit(values, url) {
             .then(resp => {
                 dispatch([
                     { type: types.USER_FETCHED, payload: resp.data }
-                ])
+                ]);
             })
             .catch(e => {
-                e.response.data.errors.forEach(erro => toastr.error('ERROR', erro))
-            })
-    }
+                e.response.data.errors.forEach(erro => toastr.error('ERROR', erro));
+            });
+    };
 }
 
 export function login(values) {
 
-    toastr.success('Login success', 'Bem vindo João Paulo' + values)
-    toastr.info('Info Messager', 'Bem-vindo João Paulo Nobrega')
+    toastr.success('Login success', 'Bem vindo João Paulo' + values);
+    toastr.info('Info Messager', 'Bem-vindo João Paulo Nobrega');
     return dispatch => 
         dispatch([
           { type: types.USER_FETCHED, payload: { id: 1, name: 'Joao', login: 'dwdd' } }
@@ -41,18 +41,19 @@ export function validateToken(token) {
         if (token) {
             axios.post(url_oapi + '/validateToken', { token })
                 .then(resp => {
-                    dispatch({ type:  types.TOKEN_VALIDATED, payload: resp.data.valid })
+                    dispatch({ type:  types.TOKEN_VALIDATED, payload: resp.data.valid });
                 })
-                .catch(e => dispatch({ 
-                    type:  types.TOKEN_VALIDATED, 
-                    payload: false,
-                    errors: e
-
-                }))
+                .catch(e => 
+                    dispatch({ 
+                        type:  types.TOKEN_VALIDATED, 
+                        payload: false,
+                        errors: e
+                    })
+                );
         } else {
-            dispatch({ type:  types.TOKEN_VALIDATED, payload: false })
+            dispatch({ type:  types.TOKEN_VALIDATED, payload: false });
         }
-    }
+    };
 }
 
 

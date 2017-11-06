@@ -10,20 +10,20 @@ import Help from 'material-ui/svg-icons/action/help';
 import TextField from 'material-ui/TextField';
 import {Link} from 'react-router';
 
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { login, signup } from './auth-action'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { login, signup } from './auth-action';
 
-import Msg from '../common/messages/messages'
+import Msg from '../common/messages/messages';
 import ThemeDefault from '../../theme-default';
-import styles from './auth-css'
+import styles from './auth-css';
 
 class Auth extends Component {
 
   onSubmit() {
     const { login } = this.props;
 
-    console.log('onSubmit', login)
+    console.log('onSubmit', login);
     login({_id: 'KJ'});  
   }
 
@@ -96,7 +96,7 @@ class Auth extends Component {
             <Msg/>
           </div>
         </MuiThemeProvider>
-      )
+      );
   }
 }
 

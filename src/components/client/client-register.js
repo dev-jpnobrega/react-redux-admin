@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
@@ -40,7 +40,7 @@ class ClientRegister extends Component {
         super(props, context);
         this.state = {
             errors: {}
-        }
+        };
     }
 
     render() {
@@ -95,7 +95,7 @@ class ClientRegister extends Component {
     }
 } 
 
-const mapStateToProps = state => ({ clients: state.clients })
+const mapStateToProps = state => ({ clients: state.clients });
 
 const mapDispatchToProps = dispatch => 
     bindActionCreators({register}, dispatch);

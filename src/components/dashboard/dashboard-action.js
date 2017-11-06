@@ -9,10 +9,10 @@ export function getGraficsData(param) {
             .then(resp => {
                 dispatch([
                     { type: types.DASHBOARD_DATA_RECEIVED, payload: resp.data }
-                ])
+                ]);
             })
             .catch(e => {
-                e.response.data.errors.forEach(erro => toastr.error('ERROR', erro))
-            })
+                e.response.data.errors.forEach(erro => toastr.error('ERROR', erro));
+            });
         };
     }

@@ -2,7 +2,7 @@ import * as types  from './dashboard-action-types';
 
 const INITIAL_STATE = {
     grafics: {}
-}
+};
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
@@ -12,4 +12,4 @@ export default (state = INITIAL_STATE, action) => {
         default:
             return state;
     }
-}
+};
