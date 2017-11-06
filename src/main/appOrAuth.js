@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import App from '../containers/App';
+import App from '../components/app';
 import Auth from '../components/auth/auth';
 import { validateToken } from '../components/auth/auth-action';
 

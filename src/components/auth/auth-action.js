@@ -22,9 +22,10 @@ export function login(values) {
 
     toastr.success('Login success', 'Bem vindo João Paulo' + values)
     toastr.info('Info Messager', 'Bem-vindo João Paulo Nobrega')
-    return dispatch => dispatch([
-                        { type: types.USER_FETCHED, payload: {id: 1, name: 'Joao', login: 'dwdd'} }
-                    ]);
+    return dispatch => 
+        dispatch([
+          { type: types.USER_FETCHED, payload: { id: 1, name: 'Joao', login: 'dwdd' } }
+        ]);
 }
 
 export function signup(values) {
