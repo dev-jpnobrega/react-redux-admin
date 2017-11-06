@@ -3,7 +3,9 @@ import ReactToaster from 'react-redux-toastr';
 
 //import './react-redux-toastr.css'
 
-export default props => {  
+
+const MessageToaster = (props) => {
+
     console.warn('props', props);
     return (
         <ReactToaster 
@@ -12,8 +14,10 @@ export default props => {
             preventDuplicate={true}
             transitionIn="bounceIn"
             transitionOut="bounceOut"
-            position="top-right"
+            position="bottom-center"
             progressBar  
         />
-    );
-};
+    )
+}
+
+export default MessageToaster

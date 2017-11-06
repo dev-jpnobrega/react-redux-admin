@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -8,11 +9,13 @@ import Checkbox from 'material-ui/Checkbox';
 import PersonAdd from 'material-ui/svg-icons/social/person-add';
 import Help from 'material-ui/svg-icons/action/help';
 import TextField from 'material-ui/TextField';
-import {Link} from 'react-router';
 
+import {Link} from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { login, signup } from './auth-action';
+
+import { toastr } from 'react-redux-toastr';
 
 import Msg from '../common/messages/messages';
 import ThemeDefault from '../../theme-default';
@@ -25,6 +28,10 @@ class Auth extends Component {
 
     console.log('onSubmit', login);
     login({_id: 'KJ'});  
+  }
+
+  onRegister() {
+    toastr.error('Atenção', 'Registro de usuário está indisponivel')
   }
 
 
@@ -69,7 +76,7 @@ class Auth extends Component {
               <div style={styles.buttonsDiv}>
                 <FlatButton
                   label="Register"
-                  href="/"
+                  onClick={() => this.onRegister()}
                   style={styles.flatButton}
                   icon={<PersonAdd />}
                 />
