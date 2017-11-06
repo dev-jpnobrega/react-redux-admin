@@ -3,7 +3,7 @@ React/Redux Material UI
 
 This is a simple responsive admin template using 
 [React](https://facebook.github.io/react/), 
-[Redux] (http://redux.js.org/) and [Material-UI](http://www.material-ui.com/) components.
+[Redux](http://redux.js.org/) and [Material-UI](http://www.material-ui.com/) components.
 
 
 Demo
