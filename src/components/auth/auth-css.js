@@ -1,7 +1,7 @@
 import {grey500, white} from 'material-ui/styles/colors';
 
-export default  {
-    loginContainer: {
+const style = {
+  loginContainer: {
       minWidth: 320,
       maxWidth: 400,
       height: 'auto',
@@ -10,51 +10,54 @@ export default  {
       left: 0,
       right: 0,
       margin: 'auto'
-    },
-    paper: {
+  },
+  paper: {
       padding: 20,
       overflow: 'auto'
-    },
-    buttonsDiv: {
+  },
+  buttonsDiv: {
       textAlign: 'center',
       padding: 10
-    },
-    flatButton: {
+  },
+  flatButton: {
       color: grey500
-    },
-    checkRemember: {
+  },
+  checkRemember: {
       style: {
-        float: 'left',
-        maxWidth: 180,
-        paddingTop: 5
+          float: 'left',
+          maxWidth: 180,
+          paddingTop: 5
       },
       labelStyle: {
-        color: grey500
+          color: grey500
       },
       iconStyle: {
-        color: grey500,
-        borderColor: grey500,
-        fill: grey500
+          color: grey500,
+          borderColor: grey500,
+          fill: grey500
       }
-    },
-    loginBtn: {
+  },
+  loginBtn: {
       float: 'right'
-    },
-    btn: {
+  },
+  btn: {
       background: '#4f81e9',
       color: white,
       padding: 7,
       borderRadius: 2,
       margin: 2,
       fontSize: 13
-    },
-    btnFacebook: {
+  },
+  btnFacebook: {
       background: '#4f81e9'
-    },
-    btnGoogle: {
+  },
+  btnGoogle: {
       background: '#e14441'
-    },
-    btnSpan: {
-      marginLeft: 5
-    },
-  };
+  },
+  btnSpan: {
+     marginLeft: 5
+  },
+};
+
+
+export default style;

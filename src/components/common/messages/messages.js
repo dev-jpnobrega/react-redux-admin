@@ -1,11 +1,7 @@
 import React from 'react';
 import ReactToaster from 'react-redux-toastr';
 
-//import './react-redux-toastr.css'
-
-
 const MessageToaster = (props) => {
-
     console.warn('props', props);
     return (
         <ReactToaster 
@@ -17,7 +13,7 @@ const MessageToaster = (props) => {
             position="bottom-center"
             progressBar  
         />
-    )
-}
+    );
+};
 
-export default MessageToaster
+export default MessageToaster;
