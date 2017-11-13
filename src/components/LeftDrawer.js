@@ -1,8 +1,9 @@
 import React,  { PropTypes } from 'react';
 import Drawer from 'material-ui/Drawer';
 import {spacing, typography} from 'material-ui/styles';
-import {white, blue600} from 'material-ui/styles/colors';
+import { white, blue600 } from 'material-ui/styles/colors';
 import MenuItem from 'material-ui/MenuItem';
+import { List, ListItem } from 'material-ui/List';
 import {Link} from 'react-router';
 import Avatar from 'material-ui/Avatar';
 
@@ -22,6 +23,10 @@ const LeftDrawer = (props) => {
     },
     menuItem: {
       color: white,
+      fontSize: 14
+    },
+    subMenuItem: {
+      color: blue600,
       fontSize: 14
     },
     avatar: {
@@ -60,15 +65,30 @@ const LeftDrawer = (props) => {
           <span style={styles.avatar.span}>{props.username}</span>
         </div>
         <div>
-          {props.menus.map((menu, index) =>
-            <MenuItem
-              key={index}
-              style={styles.menuItem}
-              primaryText={menu.text}
-              leftIcon={menu.icon}
-              containerElement={<Link to={menu.link}/>}
-            />
-          )}
+            <List>
+                { props.menus.map((menu, index) =>
+                    <ListItem            
+                      key={index}
+                      style={styles.menuItem}
+                      primaryText={menu.text}
+                      leftIcon={menu.icon}
+                      initiallyOpen={true}
+                      primaryTogglesNestedList={true}
+                      containerElement={ !menu.subMenu ? <Link to={menu.link}/> : <div/> }
+                      nestedItems={ menu.subMenu && menu.subMenu.map( (item, idx) => (
+                        <ListItem            
+                          key={idx}    
+                          style={styles.menuItem}                   
+                          primaryText={item.text}
+                          leftIcon={item.icon}
+                          containerElement={ <Link to={item.link}/> }
+                        />
+                      ))
+                      }
+                    />
+                  )
+                }
+            </List>
         </div>
     </Drawer>
   );

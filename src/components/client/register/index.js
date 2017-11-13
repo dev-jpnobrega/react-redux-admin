@@ -28,53 +28,52 @@ class ClientRegister extends Component {
     render() {
         let { client } = this.props.clients
         return (
-            <PageBase title="Registrar Cliente"
-                    navigation="Application/Cliente/Registrar ">
-            <form>
-                <TextField
-                    hintText="Name"
-                    floatingLabelText="Name"
-                    fullWidth={true}
-                    value={client.name}
-                />
-
-                <SelectField
-                    floatingLabelText="City"
-                    value=""
-                    fullWidth={true}>
-                    <MenuItem key={0} primaryText="London"/>
-                    <MenuItem key={1} primaryText="Paris"/>
-                    <MenuItem key={2} primaryText="Rome"/>
-                </SelectField>
-
-                <DatePicker
-                    hintText="Expiration Date"
-                    floatingLabelText="Expiration Date"
-                    fullWidth={true}
-                />
-
-                <div style={styles.toggleDiv}>
-                    <Toggle
-                        label="Disabled"
-                        labelStyle={styles.toggleLabel}
+            <PageBase title="Registrar Cliente" navigation="Application/Cliente/Registrar">
+                <form>
+                    <TextField
+                        hintText="Name"
+                        floatingLabelText="Name"
+                        fullWidth={true}
+                        value={client.name}
                     />
-                </div>
 
-                <Divider/>
+                    <SelectField
+                        floatingLabelText="City"
+                        value=""
+                        fullWidth={true}>
+                        <MenuItem key={0} primaryText="London"/>
+                        <MenuItem key={1} primaryText="Paris"/>
+                        <MenuItem key={2} primaryText="Rome"/>
+                    </SelectField>
 
-                <div style={styles.buttons}>
-                    <Link to="/">
-                        <RaisedButton label="Cancel"/>
-                    </Link>
-
-                    <RaisedButton   
-                        label="Save"
-                        style={styles.saveButton}
-                        type="submit"
-                        primary={true}
+                    <DatePicker
+                        hintText="Expiration Date"
+                        floatingLabelText="Expiration Date"
+                        fullWidth={true}
                     />
-                </div>
-            </form>
+
+                    <div style={styles.toggleDiv}>
+                        <Toggle
+                            label="Disabled"
+                            labelStyle={styles.toggleLabel}
+                        />
+                    </div>
+
+                    <Divider/>
+
+                    <div style={styles.buttons}>
+                        <Link to="/">
+                            <RaisedButton label="Cancel"/>
+                        </Link>
+
+                        <RaisedButton   
+                            label="Save"
+                            style={styles.saveButton}
+                            type="submit"
+                            primary={true}
+                        />
+                    </div>
+                </form>
             </PageBase>
         );
     }
@@ -83,6 +82,6 @@ class ClientRegister extends Component {
 const mapStateToProps = state => ({ clients: state.clients });
 
 const mapDispatchToProps = dispatch => 
-    bindActionCreators({register}, dispatch);
+    bindActionCreators({ register }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(ClientRegister);
