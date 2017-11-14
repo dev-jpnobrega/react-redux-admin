@@ -10,7 +10,7 @@ import PersonAdd from 'material-ui/svg-icons/social/person-add';
 import Help from 'material-ui/svg-icons/action/help';
 import TextField from 'material-ui/TextField';
 
-import {Link} from 'react-router';
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { login, signup } from './auth-action';
@@ -26,7 +26,7 @@ class Auth extends Component {
   onSubmit() {
     const { login } = this.props;
 
-    console.log('onSubmit', login);
+    //console.log('onSubmit', login);
     login({_id: 'KJ'});  
   }
 

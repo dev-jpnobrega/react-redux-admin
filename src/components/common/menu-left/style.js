@@ -1,5 +1,5 @@
 import { spacing, typography } from 'material-ui/styles';
-import { white, blue600 } from 'material-ui/styles/colors';
+import { white, blue600, black } from 'material-ui/styles/colors';
 
 const style = {
     logo: {
@@ -13,18 +13,14 @@ const style = {
       height: 56,
     },
     menuItem: {
-      color: white,
-      fontSize: 14
-    },
-    subMenuItem: {
-      color: blue600,
+      color: black,
       fontSize: 14
     },
     avatar: {
       div: {
         padding: '15px 0 20px 15px',
-        backgroundImage:  'url(' + require('../../images/material_bg.png') + ')',
-        height: 45
+        backgroundImage:  'url(' + require('../../../images/material_bg.png') + ')',
+        height: 70
       },
       icon: {
         float: 'left',

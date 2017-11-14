@@ -3,7 +3,7 @@ import * as types  from './auth-action-types';
 
 const userKey = 'key_user';
 const INITIAL_STATE = {
-    user: {name: 'teste', email: 'Email teste'}, //JSON.parse(localStorage.getItem(userKey)),
+    user: { }, //JSON.parse(localStorage.getItem(userKey)),
     validToken: false
 };
 
@@ -19,6 +19,10 @@ export default (state = INITIAL_STATE, action) => {
         case types.USER_FETCHED:
             SetUser(userKey, JSON.stringify(action.payload));
             return { ...state, user: action.payload, validToken: true };
+
+        case types.USER_SIGNOUT: 
+            RemoveUser(userKey);
+            return { ...state, ...INITIAL_STATE }
         default:
             return state;
     }

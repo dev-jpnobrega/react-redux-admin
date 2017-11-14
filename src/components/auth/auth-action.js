@@ -24,9 +24,18 @@ export function login(values) {
     toastr.info('Info Messager', 'Bem-vindo João Paulo Nobrega');
     return dispatch => 
         dispatch([
-          { type: types.USER_FETCHED, payload: { id: 1, name: 'Joao', login: 'dwdd' } }
+          { type: types.USER_FETCHED, payload: { id: 'asdf213131d1e12edd1', name: 'João Paulo Nobrega', email: 'joaopaulonobrega@hotmail.com', photo: 'http://www.material-ui.com/images/uxceo-128.jpg' } }
         ]);
 }
+
+export function signout() {
+    return dispatch => 
+        dispatch([
+            { type: types.USER_SIGNOUT, payload: { } }
+        ]);
+}
+
+
 
 export function signup(values) {
     return submit(values, url_oapi + '/signup');

@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Header from './Header';
+import Header from './common/header';
 import LeftDrawer from './common/menu-left';
-import withWidth, {LARGE, SMALL} from 'material-ui/utils/withWidth';
+import withWidth, { LARGE, SMALL } from 'material-ui/utils/withWidth';
 import ThemeDefault from '../theme-default';
 import Data from '../data';
 
@@ -29,6 +29,8 @@ class App extends React.Component {
 
   render() {
     let { navDrawerOpen } = this.state;
+    let { user } = this.props;
+
     const paddingLeftDrawerOpen = 236;
 
     const styles = {
@@ -45,11 +47,12 @@ class App extends React.Component {
       <MuiThemeProvider muiTheme={ThemeDefault}>
         <div>
           <Header styles={styles.header}
-                  handleChangeRequestNavDrawer={this.handleChangeRequestNavDrawer.bind(this)}/>
+                  handleChangeRequestNavDrawer={this.handleChangeRequestNavDrawer.bind(this)} />
 
             <LeftDrawer navDrawerOpen={navDrawerOpen}
                         menus={Data.menus}
-                        username="User Admin"/>
+                        username={user.name}
+                        photo={user.photo}/>
 
             <div style={styles.container}>
               {this.props.children}
@@ -62,7 +65,8 @@ class App extends React.Component {
 
 App.propTypes = {
   children: PropTypes.element,
-  width: PropTypes.number
+  width: PropTypes.number,
+  user: PropTypes.object
 };
 
 export default withWidth()(App);

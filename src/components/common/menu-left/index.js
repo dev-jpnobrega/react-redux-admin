@@ -13,18 +13,19 @@ const LeftDrawer = (props) => {
   return (
     <Drawer
       docked={true}
-      open={navDrawerOpen}>
+      open={navDrawerOpen}  style={{backgroundColor: 'white'}}>
         <div style={styles.logo}>
-          Admin React/Redux
+       
+        
         </div>
         <div style={styles.avatar.div}>
-          <Avatar src="http://www.material-ui.com/images/uxceo-128.jpg"
+          <Avatar src={props.photo}
                   size={50}
                   style={styles.avatar.icon}/>
           <span style={styles.avatar.span}>{props.username}</span>
         </div>
-        <div>
-            <List>
+        <div style={{backgroundColor: 'white'}}>
+            <List >
                 { props.menus.map((menu, index) =>
                     <ListItem            
                       key={index}
@@ -57,6 +58,7 @@ LeftDrawer.propTypes = {
   navDrawerOpen: PropTypes.bool,
   menus: PropTypes.array,
   username: PropTypes.string,
+  photo: PropTypes.string
 };
 
 export default LeftDrawer;
