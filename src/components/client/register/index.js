@@ -11,9 +11,9 @@ import Toggle from 'material-ui/Toggle';
 import DatePicker from 'material-ui/DatePicker';
 import Divider from 'material-ui/Divider';
 
-import styles from '../client-css'
+import styles from '../client-css';
 import { register } from '../client-action';
-import PageBase from '../../common/page-base/page-base';
+import PageBase from '../../common/page-base';
 
 
 class ClientRegister extends Component {

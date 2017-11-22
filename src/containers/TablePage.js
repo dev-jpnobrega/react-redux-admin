@@ -5,7 +5,7 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentCreate from 'material-ui/svg-icons/content/create';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import {pink500, grey200, grey500} from 'material-ui/styles/colors';
-import PageBase from '../components/common/page-base/page-base';
+import PageBase from '../components/common/page-base';
 import Data from '../data';
 
 const TablePage = () => {
