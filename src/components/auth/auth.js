@@ -17,7 +17,7 @@ import { login, signup } from './auth-action';
 
 import { toastr } from 'react-redux-toastr';
 
-import Msg from '../common/messages/messages';
+import Msg from '../common/messages';
 import ThemeDefault from '../../theme-default';
 import styles from './auth-css';
 

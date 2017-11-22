@@ -22,7 +22,7 @@ export default (state = INITIAL_STATE, action) => {
 
         case types.USER_SIGNOUT: 
             RemoveUser(userKey);
-            return { ...state, ...INITIAL_STATE }
+            return { ...state, ...INITIAL_STATE };
         default:
             return state;
     }

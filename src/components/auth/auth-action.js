@@ -19,9 +19,7 @@ function submit(values, url) {
 }
 
 export function login(values) {
-
-    toastr.success('Login success', 'Bem vindo João Paulo' + values);
-    toastr.info('Info Messager', 'Bem-vindo João Paulo Nobrega');
+    toastr.info('Info Messager', 'Bem-vindo João Paulo Nobrega' + values);
     return dispatch => 
         dispatch([
           { type: types.USER_FETCHED, payload: { id: 'asdf213131d1e12edd1', name: 'João Paulo Nobrega', email: 'joaopaulonobrega@hotmail.com', photo: 'http://www.material-ui.com/images/uxceo-128.jpg' } }
@@ -29,10 +27,10 @@ export function login(values) {
 }
 
 export function signout() {
+    toastr.info('Até breve', 'Volte sempre João Paulo Nobrega');
+
     return dispatch => 
-        dispatch([
-            { type: types.USER_SIGNOUT, payload: { } }
-        ]);
+            dispatch([{ type: types.USER_SIGNOUT, payload: { } }]);   
 }
 
 

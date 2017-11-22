@@ -38,6 +38,7 @@
     "recharts": "0.20.8",
     "redux": "3.7.2",
     "redux-form": "7.0.4",
+    "redux-logger": "3.0.6",
     "redux-multi": "0.1.12",
     "redux-promise": "0.5.3",
     "redux-thunk": "2.2.0"

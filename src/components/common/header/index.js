@@ -1,12 +1,8 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
-import { browserHistory } from 'react-router';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { signout } from '../../auth/auth-action';
-
-import { toastr } from 'react-redux-toastr';
 
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
@@ -22,10 +18,10 @@ import SearchBox from '../search-box/search-box';
 class Header extends React.Component {
  
   onSignOut() {
-    let self = this
+    let self = this;
     self.props.signout();
-  //  toastr.info('Até logo', 'Vá até lá, mais volte.');
-   setTimeout( ()=> window.location.reload(true), 2000 )
+   // toastr.info('Até logo', 'Vá até lá, mais volte.');
+    
    
     
   }
@@ -80,7 +76,7 @@ class Header extends React.Component {
                             targetOrigin={{horizontal: 'right', vertical: 'top'}}
                             anchorOrigin={{horizontal: 'right', vertical: 'top'}}
                   >
-                    <MenuItem primaryText="Sign out" onClick={() => this.onSignOut()}  />
+                    <MenuItem primaryText="Sign out" onClick={this.onSignOut.bind(this)}  />
                   </IconMenu>
                 </div>
               }
