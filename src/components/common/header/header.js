@@ -14,7 +14,7 @@ import ViewModule from 'material-ui/svg-icons/action/view-module';
 import { white } from 'material-ui/styles/colors';
 
 import style from './style';
-import SearchBox from '../search-box/search-box';
+import SearchBox from '../search-box';
 
 class Header extends React.Component {
  

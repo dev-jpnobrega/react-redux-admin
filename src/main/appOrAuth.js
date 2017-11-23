@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import App from '../components/app';
-import Auth from '../components/auth/auth';
+import Auth from '../components/auth';
 import { validateToken } from '../components/auth/auth-action';
 
 class AuthOrApp extends Component {

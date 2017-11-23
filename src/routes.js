@@ -1,9 +1,9 @@
 import React from 'react';
-import { Route, IndexRoute, IndexRedirect } from 'react-router';
-import NotFoundPage from './containers/NotFoundPage.js';
+import { Route, IndexRoute } from 'react-router';
+//import NotFoundPage from './containers/NotFoundPage.js';
 import LoginPage from './containers/LoginPage';
 import TablePage from './containers/TablePage';
-import Dashboard from './components/dashboard/dashboard';
+import Dashboard from './components/dashboard';
 
 import appOrAuth from './main/appOrAuth'; 
 import ClientRegister from './components/client/register';
