@@ -5,7 +5,7 @@ import LeftDrawer from './common/menu-left';
 import withWidth, { LARGE, SMALL } from 'material-ui/utils/withWidth';
 import ThemeDefault from '../theme-default';
 import Data from '../data';
-import Msg from './common/messages';
+import Messager from './common/messages';
 
 class App extends React.Component {
 
@@ -58,7 +58,7 @@ class App extends React.Component {
             <div style={styles.container}>
               {this.props.children}
             </div>
-            <Msg />
+            <Messager />
         </div>
       </MuiThemeProvider>
     );
